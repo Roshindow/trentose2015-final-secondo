@@ -3,8 +3,19 @@
 
 describe("Flirtr", function() {
 
-  it("should...", function() {  
-    
-  });    
+  it("Dovrebbe restituire 1", function () {
+    var np = FlirtModel.getScore("love");
+    expect(np).toBe(1);
+  });  
+  
+  it("Dovrebbe restituire 0", function () {
+    var np = FlirtModel.getScore("love friend");
+    expect(np).toBe(0);
+  }); 
+  
+  it("Dovrebbe restituire -1", function () {
+    var np = FlirtModel.getScore("friend");
+    expect(np).toBe(-1);
+  }); 
  
 });
